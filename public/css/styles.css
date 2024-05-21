@@ -1,0 +1,78 @@
+/* General body and HTML styling for full height and center alignment */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif; /* added a basic font family */
+    cursor: crosshair;
+    background: url('/public/images/backgroundImage.png') no-repeat center center fixed; 
+    background-size: cover; 
+    overflow: hidden;
+}
+
+/* Container for the logo to facilitate centering */
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; 
+}
+
+/* Styling for the logo */
+.logo {
+    width: 80%; 
+    max-width: none; 
+    transition: transform 6s ease-in-out; 
+}
+
+/* Apply growing effect on hover */
+.logo:hover {
+    transform: scale(2); /*increase the logo size on hover */
+}
+
+/* Footer styling with centered text */
+footer {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    z-index: 2; 
+}
+
+/* styling for links in the footer */
+footer a {
+    text-decoration: none;
+    color: #fcfcfc;  
+}
+
+.footer-text {
+    text-align: center; 
+    color: #fcfcfc; 
+    font-size: 14px; 
+    padding: 20px 0; 
+    font-family: 'Arial', sans-serif; 
+
+}
+
+.body-text {
+    color: #151515; 
+    font-size: 20px; 
+    line-height: 1.6; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 10px; 
+}
+
+/* media query for responsiveness on mobile devices */
+@media (max-width: 768px) {
+    .logo {
+        width: 90%; 
+        max-width: none; 
+    }
+}
